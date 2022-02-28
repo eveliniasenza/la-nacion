@@ -1,0 +1,273 @@
+@import './base/variables';
+
+
+hr {
+  margin-bottom: 22px;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "header header header" 
+                         "section section section" 
+                         "footer footer footer ";
+}
+
+nav > ul {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+
+}
+nav > ul > li > a {
+  text-decoration: none;
+  color:black;
+}
+
+li {
+  list-style:none;
+  padding: 3px 10px 0 0;
+}
+
+h2 {
+  margin-left: 16px;
+}
+
+.card {
+  width: 350px;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  margin-bottom: 16px;
+  cursor: pointer;
+
+}
+.red{
+  background-color: #C61C1E;
+  color:$bg-color-white;
+}
+.news {
+  width: 600px;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  margin-bottom: 16px;
+  cursor: pointer;
+
+}
+
+.adv{
+  width: 294px;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.card-container {
+  padding: 16px;
+}
+
+.space{
+padding:10px;
+}
+
+.image {
+  height: 250px;
+  max-width: 100%;
+  background-position: center center;
+  background-size: cover;
+}
+
+.image-xl {
+  height: 900px;
+  max-width: 100%;
+  background-position: center center;
+  background-size: cover;
+}
+
+.card:hover .category {
+  color: $bg-color-hover;
+}
+
+.category {
+  transition: 0.3s;
+  color: $bg-color-category;
+}
+
+.h3 {
+  font-size: 26px;
+  margin: 8px 0;
+}
+
+.p {
+  margin: 8px 0;
+  font-size: 17px;
+  color: #5F5F5F;
+  font-weight: 700;
+}
+
+.font{
+  font-family: $font-style;
+  font-size: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.col {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.33334%;
+  flex: 0 0 33.33334%;
+  max-width: 33.33334%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns:900px 300px;
+  background-color: #fff;
+}
+
+.content {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 400px 790px;
+  background-color: #fff;
+  padding:16px;
+}
+
+
+body {
+  margin: 0;
+  font-family: $font-style;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: $font-style;
+}
+
+.App {
+  text-align: center; }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none; }
+
+  .header {
+    grid-area: header;
+    height: 365px;
+    left: 0px;
+    right: 0px;
+    top: 113px;
+    background-image: url("https://r.prcdn.co/res/es-ar/g24411/t377139739/2/images/se-lanacion_bkiosco.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .footer{
+    grid-area: footer;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    font-weight: bold;
+    padding:10px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; } }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: $bg-color-white; }
+
+.App-link {
+  color: $bg-color-link; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.font-primary {
+  font-family: $font-style; }
+
+.font-secondary {
+  font-family: $font-style; }
+
+.font-primary-bold {
+  font-family: $font-style; }
+
+
+
+@media screen and (max-width: 768px) {
+  .col {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .content {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 400px;
+    padding:16px;
+  }
+  .wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 500px;
+  }
+  
+.image-xl {
+  height: 200px;
+  max-width: 100%;
+}
+main {
+  display: grid;
+  grid-template-areas: "header" "section" "footer ";
+}
+  
+}
+
+@media screen and (max-width: 320px) {
+  .col {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .content {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 400px;
+    padding:16px;
+  }
+  .wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 300px;   
+  }
+  .image-xl {
+    height: 200px;
+
+  }
+  main {
+    display: grid;
+    grid-template-areas: "header" "section" "footer ";
+}
+
+}
